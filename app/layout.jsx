@@ -3,6 +3,7 @@ import './animations.css';
 import RevealProvider from '@/components/RevealProvider';
 import ProgressBar from '@/components/ProgressBar';
 import BackToTop from '@/components/BackToTop';
+import Protect from '@/components/Protect';
 
 const FAVICON =
   'data:image/svg+xml,' +
@@ -14,7 +15,6 @@ export const metadata = {
   title: 'Arjun Sharma — Digital Developer',
   description: 'Arjun Sharma — digital developer & designer based in Mumbai.',
   icons: { icon: FAVICON },
-  themeColor: '#f7f6f2',
   openGraph: {
     title: 'Arjun Sharma — Digital Developer',
     description: 'Digital developer & designer based in Mumbai.',
@@ -23,14 +23,15 @@ export const metadata = {
   },
 };
 
+export const viewport = {
+  themeColor: '#f7f6f2',
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        onContextMenu={(e) => e.preventDefault()}
-        onCopy={(e) => e.preventDefault()}
-        onCut={(e) => e.preventDefault()}
-      >
+      <body>
+        <Protect />
         <ProgressBar />
         <script
           type="application/ld+json"
