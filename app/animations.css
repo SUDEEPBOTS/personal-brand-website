@@ -117,6 +117,20 @@
   transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
 }
 
+/* Sheen sweep across thumbnail on hover */
+.work-thumb::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, transparent 30%, rgba(255, 255, 255, 0.45) 50%, transparent 70%);
+  transform: translateX(-130%);
+  pointer-events: none;
+  transition: transform 0.8s ease;
+}
+.work-card:hover .work-thumb::after {
+  transform: translateX(130%);
+}
+
 /* ---------- Draw-on-hover underline (nav + work links) ---------- */
 .nav-links a {
   position: relative;

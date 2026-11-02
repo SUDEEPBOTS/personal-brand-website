@@ -19,6 +19,10 @@ export default function Hero() {
             <a href="#contact" className="btn btn-outline">Get in touch</a>
           </div>
 
+          <p className="hero-note-line reveal d4">
+            <span className="dot" /> Currently accepting new projects for 2026.
+          </p>
+
           <HeroStats />
         </div>
 

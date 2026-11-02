@@ -273,6 +273,22 @@ section {
   border-color: var(--ink);
 }
 
+.hero-note-line {
+  margin-top: 22px;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.hero-note-line .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #2f8f5b;
+  box-shadow: 0 0 0 3px rgba(47, 143, 91, 0.16);
+}
+
 .hero-meta {
   margin-top: 40px;
   padding-top: 28px;
@@ -280,6 +296,43 @@ section {
   display: flex;
   gap: 40px;
   flex-wrap: wrap;
+}
+
+/* Toolkit strip */
+.stack {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 22px 0;
+}
+.stack .container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+}
+.stack-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+}
+.stack-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 8px 22px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.stack-list li {
+  position: relative;
+}
+.stack-list li:not(:last-child)::after {
+  content: "·";
+  position: absolute;
+  right: -14px;
+  color: var(--line);
 }
 
 .hero-meta .m {
