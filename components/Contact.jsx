@@ -3,14 +3,20 @@
 import { useState } from 'react';
 
 export default function Contact() {
-  const [sent, setSent] = useState(false);
+  const [state, setState] = useState('idle'); // idle | sending | sent
 
   const onSubmit = (e) => {
     e.preventDefault();
-    e.target.reset();
-    setSent(true);
-    setTimeout(() => setSent(false), 6000);
+    if (state === 'sending') return;
+    setState('sending');
+    setTimeout(() => {
+      e.target.reset();
+      setState('sent');
+      setTimeout(() => setState('idle'), 6000);
+    }, 900);
   };
+
+  const sending = state === 'sending';
 
   return (
     <section id="contact">
@@ -58,9 +64,11 @@ export default function Contact() {
             <textarea id="message" name="message" placeholder="A few lines about your project..." required></textarea>
           </div>
 
-          <button type="submit" className="btn btn-primary">Send message</button>
+          <button type="submit" className="btn btn-primary" disabled={sending}>
+            {sending ? 'Sending…' : 'Send message'}
+          </button>
 
-          <div className={`form-success ${sent ? 'show' : ''}`}>
+          <div className={`form-success ${state === 'sent' ? 'show' : ''}`}>
             Thank you — your message has been sent. I&apos;ll be in touch shortly.
           </div>
         </form>

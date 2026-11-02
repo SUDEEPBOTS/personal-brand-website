@@ -740,6 +740,9 @@ footer p {
 .nav-links a.active {
   color: var(--ink);
 }
+.nav-links a.active::after {
+  transform: scaleX(1);
+}
 
 /* Back-to-top button */
 .to-top {

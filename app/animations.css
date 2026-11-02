@@ -98,7 +98,21 @@
   transform: translateY(1px) scale(0.985);
 }
 .btn-primary {
+  position: relative;
+  overflow: hidden;
   box-shadow: 0 2px 0 rgba(20, 20, 20, 0.35);
+}
+.btn-primary::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, transparent 30%, rgba(255, 255, 255, 0.35) 50%, transparent 70%);
+  transform: translateX(-130%);
+  pointer-events: none;
+  transition: transform 0.7s ease;
+}
+.btn-primary:hover::after {
+  transform: translateX(130%);
 }
 .btn-primary:hover {
   box-shadow: 0 4px 18px rgba(31, 63, 99, 0.28);

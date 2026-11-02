@@ -14,6 +14,7 @@ export const metadata = {
   title: 'Arjun Sharma — Digital Developer',
   description: 'Arjun Sharma — digital developer & designer based in Mumbai.',
   icons: { icon: FAVICON },
+  themeColor: '#f7f6f2',
   openGraph: {
     title: 'Arjun Sharma — Digital Developer',
     description: 'Digital developer & designer based in Mumbai.',
