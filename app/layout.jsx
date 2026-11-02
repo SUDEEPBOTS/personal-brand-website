@@ -12,12 +12,12 @@ const FAVICON =
   );
 
 export const metadata = {
-  title: 'Arjun Sharma — Digital Developer',
-  description: 'Arjun Sharma — digital developer & designer based in Mumbai.',
+  title: 'SUDEEPBOTS — Backend Engineer & Telegram Bot Architect',
+  description: 'Sudeep Mandal (SUDEEPBOTS) — backend & distributed systems engineer based in Delhi, India.',
   icons: { icon: FAVICON },
   openGraph: {
-    title: 'Arjun Sharma — Digital Developer',
-    description: 'Digital developer & designer based in Mumbai.',
+    title: 'SUDEEPBOTS — Backend Engineer & Telegram Bot Architect',
+    description: 'Backend & distributed systems engineer based in Delhi, India.',
     type: 'website',
     locale: 'en_US',
   },
@@ -39,10 +39,12 @@ export default function RootLayout({ children }) {
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'Person',
-              name: 'Arjun Sharma',
-              jobTitle: 'Digital Developer & Designer',
-              url: 'https://arjun.dev',
-              address: { '@type': 'PostalAddress', addressLocality: 'Mumbai', addressCountry: 'IN' },
+              name: 'Sudeep Mandal',
+              alternateName: 'SUDEEPBOTS',
+              jobTitle: 'Backend & Distributed Systems Engineer',
+              url: 'https://github.com/SUDEEPBOTS',
+              email: 'sudeeptelegram@gmail.com',
+              address: { '@type': 'PostalAddress', addressLocality: 'Delhi', addressCountry: 'IN' },
             }),
           }}
         />

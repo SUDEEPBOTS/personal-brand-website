@@ -40,7 +40,7 @@ export default function Navbar() {
   return (
     <nav className={`nav ${scrolled ? 'scrolled' : ''}`}>
       <div className="container">
-        <a href="#" className="brand">Arjun Sharma</a>
+        <a href="#" className="brand">SUDEEPBOTS</a>
 
         <ul className={`nav-links ${open ? 'open' : ''}`}>
           {LINKS.map((l) => (

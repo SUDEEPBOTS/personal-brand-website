@@ -3,9 +3,9 @@
 import { useEffect, useRef, useState } from 'react';
 
 const STATS = [
-  { label: 'Years experience', value: 8, suffix: '+' },
-  { label: 'Products shipped', value: 50, suffix: '+' },
-  { label: 'Client satisfaction', value: 98, suffix: '%' },
+  { label: 'Bots / APIs built', value: 40, suffix: '+' },
+  { label: 'Uptime', value: 99, suffix: '.9%' },
+  { label: 'Requests / day', value: 500, suffix: 'K+' },
 ];
 
 function Counter({ value, suffix, started, delay }) {

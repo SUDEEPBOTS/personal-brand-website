@@ -23,21 +23,25 @@ export default function Contact() {
       <div className="container contact-grid">
         <div className="contact-info reveal">
           <span className="eyebrow">Contact</span>
-          <h2>Let&apos;s talk about your project</h2>
-          <p>Tell me where you are and where you&apos;d like to be. I&apos;ll reply within one working day.</p>
+          <h2>Let&apos;s talk about your backend project</h2>
+          <p>Whether it&apos;s a bot, an API, or a whole streaming pipeline — I&apos;ll respond within one working day.</p>
 
           <div className="contact-methods">
-            <a href="mailto:hello@arjun.dev" className="method">
+            <a href="mailto:sudeeptelegram@gmail.com" className="method">
               <span className="label">Email</span>
-              <span className="value">hello@arjun.dev</span>
+              <span className="value">sudeeptelegram@gmail.com</span>
             </a>
-            <a href="tel:+919999999999" className="method">
-              <span className="label">Phone</span>
-              <span className="value">+91 99999 99999</span>
+            <a href="https://t.me/Z0iiw" target="_blank" rel="noopener noreferrer" className="method">
+              <span className="label">Telegram</span>
+              <span className="value">t.me/Z0iiw</span>
+            </a>
+            <a href="https://github.com/SUDEEPBOTS" target="_blank" rel="noopener noreferrer" className="method">
+              <span className="label">GitHub</span>
+              <span className="value">github.com/SUDEEPBOTS</span>
             </a>
             <div className="method">
               <span className="label">Based in</span>
-              <span className="value">Mumbai, India</span>
+              <span className="value">Delhi, India</span>
             </div>
           </div>
         </div>

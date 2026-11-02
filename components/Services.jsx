@@ -1,21 +1,21 @@
 const SERVICES = [
   {
     num: '01',
-    title: 'Web Design',
-    desc: 'Clean interface design and thoughtful layout — a visual system that gives your brand authority and makes navigation feel effortless.',
-    tags: ['UI / UX', 'Design systems', 'Responsive'],
+    title: 'Backend Systems',
+    desc: 'High-concurrency services and APIs built in Go and Python — designed to scale and survive real production load.',
+    tags: ['Go', 'Python', 'Redis', 'Docker'],
   },
   {
     num: '02',
-    title: 'Web Development',
-    desc: 'Fast, accessible, and maintainable builds — from marketing sites to full web apps, engineered to load quickly on any device.',
-    tags: ['HTML / CSS', 'JavaScript', 'Performance'],
+    title: 'Bot Architecture',
+    desc: 'Telegram bots and bot networks engineered around MTProto — voice/video streaming, automation, and media pipelines.',
+    tags: ['Telegram', 'MTProto', 'Pyrogram', 'FFmpeg'],
   },
   {
     num: '03',
-    title: 'Digital Strategy',
-    desc: 'I help you shape the website your customers actually need — structure, messaging, and design that leads to more enquiries and sales.',
-    tags: ['Research', 'SEO', 'Analytics'],
+    title: 'Streaming & Infra',
+    desc: 'Media streaming engines, chunked uploads, edge caching, and Cloudflare Workers — fast delivery anywhere in the world.',
+    tags: ['Streaming', 'Cloudflare', 'Edge cache', 'APIs'],
   },
 ];
 
@@ -26,7 +26,7 @@ export default function Services() {
         <div className="section-head reveal">
           <span className="eyebrow">Services</span>
           <h2>What I can do for you</h2>
-          <p>Three focused ways I help businesses put their best foot forward online.</p>
+          <p>Deep, specialized backend work — the kind that keeps systems fast and steady.</p>
         </div>
 
         <div className="services-list">

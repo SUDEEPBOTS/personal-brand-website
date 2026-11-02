@@ -1,18 +1,19 @@
 const TOOLS = [
-  'HTML / CSS',
+  'Go / Golang',
+  'Python',
   'JavaScript',
-  'React',
-  'Next.js',
-  'UI Design',
-  'Responsive',
-  'SEO',
+  'SQL',
+  'Bash',
+  'MTProto',
+  'Redis',
+  'Docker',
 ];
 
 export default function Stack() {
   return (
     <div className="stack">
       <div className="container">
-        <span className="stack-label">Toolkit</span>
+        <span className="stack-label">Core stack</span>
         <ul className="stack-list">
           {TOOLS.map((t) => (
             <li key={t}>{t}</li>

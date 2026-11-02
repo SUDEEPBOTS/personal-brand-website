@@ -2,29 +2,29 @@ const PROJECTS = [
   {
     index: '01',
     year: '2026',
-    monogram: 'N',
+    monogram: 'Y',
     thumb: 'thumb-1',
-    type: 'SaaS website',
-    title: 'Nova Analytics',
-    desc: 'A clear, credible product site for a data startup. The redesign lifted demo signups by 3.2x.',
+    type: 'Cloud platform',
+    title: 'Yukisbox',
+    desc: 'High-speed cloud file hosting — chunked uploads and instant byte-range video streaming.',
   },
   {
     index: '02',
-    year: '2025',
-    monogram: 'B',
+    year: '2026',
+    monogram: 'A',
     thumb: 'thumb-2',
-    type: 'E-commerce',
-    title: 'Bloom Store',
-    desc: 'An online store with a friction-free checkout. Conversion rate doubled after launch.',
+    type: 'Streaming engine',
+    title: 'YukiAPI',
+    desc: '4-tier high-throughput media streaming engine, built in Go with multi-client MTProto pools.',
   },
   {
     index: '03',
     year: '2025',
-    monogram: 'F',
+    monogram: 'M',
     thumb: 'thumb-3',
-    type: 'Community platform',
-    title: 'FitX',
-    desc: 'A measured landing page and content hub for a fitness community — built for both speed and clarity.',
+    type: 'Telegram bot',
+    title: 'YUKIMUSIC',
+    desc: 'Group voice/video chat streaming engine powered by Python, Pyrogram, and FFmpeg.',
   },
 ];
 
@@ -34,8 +34,8 @@ export default function Work() {
       <div className="container">
         <div className="section-head reveal">
           <span className="eyebrow">Selected work</span>
-          <h2>A few projects I&apos;m proud of</h2>
-          <p>Recent collaborations, each built to solve a specific business problem.</p>
+          <h2>Projects built to <span className="accent sheen">hold up</span></h2>
+          <p>Live systems carrying real traffic every day.</p>
         </div>
 
         <div className="work-grid">
@@ -50,7 +50,7 @@ export default function Work() {
                 <h3>{p.title}</h3>
                 <p>{p.desc}</p>
                 <div className="work-meta">
-                  <a href="#" className="work-link">View case study</a>
+                  <a href="#" className="work-link">View project</a>
                   <span className="work-year">{p.year}</span>
                 </div>
               </div>
