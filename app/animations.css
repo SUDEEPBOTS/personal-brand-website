@@ -1,0 +1,187 @@
+/* ============================================================
+   Premium motion — separate stylesheet
+   Kept minimal & tasteful: blur-fade reveals, soft glows,
+   micro-interactions. No loud effects.
+   ============================================================ */
+
+/* ---------- Reveal: fade + rise + de-blur ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  filter: blur(6px);
+  transition:
+    opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform, filter;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+/* Stagger helpers (applied inline per element) */
+.d1 { transition-delay: 0.06s; }
+.d2 { transition-delay: 0.14s; }
+.d3 { transition-delay: 0.22s; }
+.d4 { transition-delay: 0.30s; }
+.d5 { transition-delay: 0.38s; }
+
+/* ---------- Ambient glow behind hero (slow, calm) ---------- */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -30%;
+  left: 42%;
+  width: 640px;
+  height: 640px;
+  transform: translateX(-50%);
+  background: radial-gradient(
+    circle,
+    rgba(31, 63, 99, 0.12) 0%,
+    rgba(31, 63, 99, 0) 62%
+  );
+  pointer-events: none;
+  animation: heroGlow 12s ease-in-out infinite;
+}
+@keyframes heroGlow {
+  0%, 100% { opacity: 0.7; transform: translateX(-50%) scale(1); }
+  50% { opacity: 1; transform: translateX(-50%) scale(1.12); }
+}
+
+/* ---------- Gentle float on the hero testimonial card ---------- */
+.hero-note {
+  animation: floatNote 7s ease-in-out infinite;
+}
+@keyframes floatNote {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* ---------- Metallic sheen on the italic accent ---------- */
+.accent.sheen {
+  background: linear-gradient(
+    110deg,
+    #1f3f63 20%,
+    #3c6aa8 40%,
+    #1f3f63 60%,
+    #2a4f7e 80%
+  );
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: sheen 7s ease-in-out infinite;
+}
+@keyframes sheen {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ---------- Button press micro-interaction ---------- */
+.btn {
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.18s ease,
+    box-shadow 0.25s ease;
+}
+.btn:active {
+  transform: translateY(1px) scale(0.985);
+}
+.btn-primary {
+  box-shadow: 0 2px 0 rgba(20, 20, 20, 0.35);
+}
+.btn-primary:hover {
+  box-shadow: 0 4px 18px rgba(31, 63, 99, 0.28);
+}
+
+/* ---------- Work card: smooth lift + image zoom ---------- */
+.work-card:hover .work-thumb .monogram {
+  transform: scale(1.06);
+  opacity: 1;
+}
+.work-thumb .monogram {
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.5s ease;
+  opacity: 0.75;
+}
+.work-card {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
+}
+
+/* ---------- Draw-on-hover underline (nav + work links) ---------- */
+.nav-links a {
+  position: relative;
+}
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 1.5px;
+  width: 100%;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+.nav-links a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.work-link {
+  background-image: linear-gradient(var(--accent), var(--accent));
+  background-repeat: no-repeat;
+  background-size: 0% 1.5px;
+  background-position: left 100%;
+}
+.work-link:hover {
+  background-size: 100% 1.5px;
+}
+.work-link::after {
+  content: "→";
+  display: inline-block;
+  margin-left: 6px;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.work-link:hover::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ---------- Smooth scroll progress bar ---------- */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--accent), #3c6aa8);
+  z-index: 200;
+  border-radius: 0 2px 2px 0;
+}
+
+/* ---------- Respect reduced-motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition: none;
+  }
+  .hero::before,
+  .hero-note,
+  .accent.sheen {
+    animation: none;
+  }
+}
