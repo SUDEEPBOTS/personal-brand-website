@@ -1207,3 +1207,73 @@ footer p {
 .client-name:hover {
   color: var(--ink);
 }
+
+/* ---------- Open source / GitHub repos ---------- */
+.oss-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+.oss-card {
+  display: block;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), box-shadow 0.3s ease, border-color 0.3s;
+}
+.oss-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+.oss-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.oss-name {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+.oss-fork {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  padding: 2px 8px;
+  border-radius: 100px;
+}
+.oss-desc {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+  min-height: 42px;
+}
+.oss-meta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+.oss-lang {
+  font-weight: 500;
+  color: var(--accent);
+}
+.oss-error {
+  text-align: center;
+  color: var(--muted);
+  padding: 20px 0;
+}
+@media (max-width: 860px) {
+  .oss-grid {
+    grid-template-columns: 1fr;
+    max-width: 460px;
+  }
+}

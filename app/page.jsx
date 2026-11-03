@@ -10,6 +10,7 @@ import Metrics from '@/components/Metrics';
 import Testimonials from '@/components/Testimonials';
 import CtaBanner from '@/components/CtaBanner';
 import Clients from '@/components/Clients';
+import GithubRepos from '@/components/GithubRepos';
 import Work from '@/components/Work';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
@@ -30,6 +31,7 @@ export default function Home() {
         <Faq />
         <Testimonials />
         <Work />
+        <GithubRepos />
         <Contact />
         <CtaBanner />
       </main>
