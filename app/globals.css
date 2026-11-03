@@ -1020,3 +1020,103 @@ footer p {
     grid-template-columns: 1fr;
   }
 }
+
+/* ---------- Metrics band ---------- */
+.metrics {
+  background: var(--ink);
+  color: var(--bg);
+  padding: 56px 0;
+  border-radius: 0;
+}
+.metrics .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+.metric {
+  text-align: center;
+}
+.metric-value {
+  font-family: var(--serif);
+  font-size: 2.6rem;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: -0.02em;
+}
+.metric-label {
+  margin-top: 6px;
+  font-size: 0.85rem;
+  color: rgba(247,246,242,0.6);
+}
+@media (max-width: 760px) {
+  .metrics .container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+/* ---------- Testimonials ---------- */
+.testimonial {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 44px 40px;
+  box-shadow: var(--shadow);
+}
+.testimonial-quote {
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  line-height: 1.5;
+  color: var(--ink);
+  margin-bottom: 24px;
+}
+.testimonial-cite {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 24px;
+}
+.testimonial-cite strong {
+  font-size: 0.95rem;
+}
+.testimonial-cite span {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+.testimonial-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.testimonial-nav button {
+  background: none;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+.testimonial-nav button:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+.testimonial-nav .dotnav {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  padding: 0;
+  border: none;
+  background: var(--line);
+}
+.testimonial-nav .dotnav.active {
+  background: var(--accent);
+  transform: scale(1.25);
+}
