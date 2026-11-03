@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const TESTIMONIALS = [
   {
@@ -26,6 +26,15 @@ const TESTIMONIALS = [
 export default function Testimonials() {
   const [i, setI] = useState(0);
   const t = TESTIMONIALS[i];
+
+  useEffect(() => {
+    const onKey = (e) => {
+      if (e.key === 'ArrowLeft') setI((i) => (i - 1 + TESTIMONIALS.length) % TESTIMONIALS.length);
+      if (e.key === 'ArrowRight') setI((i) => (i + 1) % TESTIMONIALS.length);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, []);
 
   return (
     <section id="testimonials">
