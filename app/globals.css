@@ -1173,3 +1173,37 @@ footer p {
 .btn-cta:hover {
   background: rgba(255,255,255,0.9);
 }
+
+/* ---------- Clients / trusted-by strip ---------- */
+.clients {
+  border-bottom: 1px solid var(--line);
+  padding: 40px 0;
+}
+.clients .container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px 40px;
+}
+.clients-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+}
+.clients-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 36px;
+  align-items: center;
+}
+.client-name {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  color: rgba(25,26,28,0.55);
+  transition: color 0.25s;
+}
+.client-name:hover {
+  color: var(--ink);
+}

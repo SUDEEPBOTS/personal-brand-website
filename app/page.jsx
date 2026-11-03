@@ -9,6 +9,7 @@ import Faq from '@/components/Faq';
 import Metrics from '@/components/Metrics';
 import Testimonials from '@/components/Testimonials';
 import CtaBanner from '@/components/CtaBanner';
+import Clients from '@/components/Clients';
 import Work from '@/components/Work';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
@@ -23,6 +24,7 @@ export default function Home() {
         <Banner />
         <Services />
         <Metrics />
+        <Clients />
         <Process />
         <Experience />
         <Faq />
