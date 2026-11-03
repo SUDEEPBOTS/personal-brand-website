@@ -31,6 +31,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+        <div className="orb orb-1" aria-hidden="true" />
+        <div className="orb orb-2" aria-hidden="true" />
+        <div className="grain" aria-hidden="true" />
         <Protect />
         <ProgressBar />
         <script

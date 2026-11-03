@@ -213,3 +213,115 @@
     animation: none;
   }
 }
+
+/* ============================================================
+   Rich effects (client: more effects & animations)
+   ============================================================ */
+
+/* ---------- Floating gradient orbs (background) ---------- */
+.orb {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(110px);
+  opacity: 0.45;
+  pointer-events: none;
+  z-index: 0;
+}
+.orb-1 {
+  width: 520px; height: 520px;
+  background: radial-gradient(circle, rgba(31,63,99,0.35), transparent 70%);
+  top: -160px; right: -120px;
+  animation: orbFloat 18s ease-in-out infinite;
+}
+.orb-2 {
+  width: 420px; height: 420px;
+  background: radial-gradient(circle, rgba(60,106,168,0.3), transparent 70%);
+  bottom: -120px; left: -100px;
+  animation: orbFloat 22s ease-in-out infinite reverse;
+}
+@keyframes orbFloat {
+  0%,100% { transform: translate(0,0) scale(1); }
+  33% { transform: translate(40px,-30px) scale(1.08); }
+  66% { transform: translate(-30px,20px) scale(0.95); }
+}
+
+/* ---------- Animated gradient border (work cards) ---------- */
+.work-card {
+  position: relative;
+  background-clip: padding-box;
+}
+.work-card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: linear-gradient(135deg, rgba(31,63,99,0.5), rgba(60,106,168,0.15), rgba(31,63,99,0.5), rgba(60,106,168,0.55));
+  background-size: 300% 300%;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: borderflow 6s linear infinite;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.work-card:hover::before {
+  opacity: 1;
+}
+@keyframes borderflow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 300% 50%; }
+}
+
+/* ---------- Marquee (stack strip) ---------- */
+.stack-list {
+  overflow: hidden;
+  position: relative;
+}
+.stack-track {
+  display: flex;
+  gap: 0;
+  width: max-content;
+  animation: marquee 24s linear infinite;
+}
+.stack-list.animating li {
+  padding: 0 22px;
+  white-space: nowrap;
+}
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.stack-list.animating .stack-track::after {
+  content: "";
+  display: block;
+}
+
+/* ---------- Tilt shine (JS-driven via CSS vars) ---------- */
+.tilt {
+  transform: perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));
+  transition: transform 0.25s ease, box-shadow 0.35s ease;
+  will-change: transform;
+}
+
+/* ---------- Magnetic buttons (JS-driven) ---------- */
+.magnetic {
+  transition: transform 0.2s cubic-bezier(0.22,1,0.36,1);
+  will-change: transform;
+}
+
+/* ---------- Soft pulse dot ---------- */
+.dot.pulse {
+  animation: pulseDot 2.4s ease-in-out infinite;
+}
+@keyframes pulseDot {
+  0%,100% { box-shadow: 0 0 0 0 rgba(47,143,91,0.35); }
+  50% { box-shadow: 0 0 0 6px rgba(47,143,91,0); }
+}
+
+/* ---------- Parallax hero visual ---------- */
+.parallax {
+  transition: transform 0.1s ease-out;
+  will-change: transform;
+}

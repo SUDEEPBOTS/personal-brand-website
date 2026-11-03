@@ -28,6 +28,8 @@ const PROJECTS = [
   },
 ];
 
+import Tilt from './Tilt';
+
 export default function Work() {
   return (
     <section id="work">
@@ -40,7 +42,7 @@ export default function Work() {
 
         <div className="work-grid">
           {PROJECTS.map((p) => (
-            <div className="work-card reveal" key={p.title}>
+            <Tilt key={p.title}><div className="work-card reveal">
               <div className={`work-thumb ${p.thumb}`}>
                 <span className="work-index">{p.index}</span>
                 <span className="monogram">{p.monogram}</span>
@@ -54,7 +56,7 @@ export default function Work() {
                   <span className="work-year">{p.year}</span>
                 </div>
               </div>
-            </div>
+            </div></Tilt>
           ))}
         </div>
       </div>

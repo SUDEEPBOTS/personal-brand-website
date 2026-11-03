@@ -9,16 +9,14 @@ const TOOLS = [
   'Docker',
 ];
 
+import Marquee from './Marquee';
+
 export default function Stack() {
   return (
     <div className="stack">
       <div className="container">
         <span className="stack-label">Core stack</span>
-        <ul className="stack-list">
-          {TOOLS.map((t) => (
-            <li key={t}>{t}</li>
-          ))}
-        </ul>
+        <Marquee items={TOOLS} />
       </div>
     </div>
   );

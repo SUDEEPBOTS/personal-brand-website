@@ -851,3 +851,68 @@ footer p {
     padding-top: 120px;
   }
 }
+
+/* ---------- Film grain (luxury texture) ---------- */
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: 250;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.6'/%3E%3C/svg%3E");
+}
+
+/* ---------- Experience timeline ---------- */
+.timeline {
+  position: relative;
+  padding-left: 32px;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 4px;
+  bottom: 4px;
+  width: 1px;
+  background: var(--line);
+}
+.timeline-item {
+  position: relative;
+  padding: 0 0 40px 28px;
+}
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+.timeline-dot {
+  position: absolute;
+  left: -32px;
+  top: 6px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 0 4px rgba(31, 63, 99, 0.12);
+}
+.timeline-period {
+  font-family: var(--serif);
+  font-size: 0.9rem;
+  color: var(--accent);
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+.timeline-body {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 22px 24px;
+  box-shadow: var(--shadow);
+}
+.timeline-body h3 {
+  font-size: 1.15rem;
+  margin-bottom: 6px;
+}
+.timeline-body p {
+  color: var(--muted);
+  font-size: 0.93rem;
+}
