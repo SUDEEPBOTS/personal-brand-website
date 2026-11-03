@@ -1391,3 +1391,49 @@ footer p {
   0% { background-position: 100% 0; }
   100% { background-position: 0 0; }
 }
+
+/* ---------- Badges strip ---------- */
+.badges {
+  padding: 40px 0;
+}
+.badges .container {
+  display: flex;
+  align-items: center;
+  gap: 16px 40px;
+  flex-wrap: wrap;
+}
+.badges-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+}
+.badges-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.badge {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px 16px;
+  transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+}
+.badge:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  box-shadow: var(--shadow);
+}
+.badge-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.badge-note {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
