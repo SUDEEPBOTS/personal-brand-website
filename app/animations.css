@@ -525,3 +525,28 @@ footer::before {
   z-index: 1;
   will-change: transform;
 }
+
+/* Pause marquees & banners on hover (a11y + UX) */
+.stack-list.animating:hover .stack-track,
+.banner:hover .banner-track {
+  animation-play-state: paused;
+}
+
+/* Reduce motion: tame all ambient motion */
+@media (prefers-reduced-motion: reduce) {
+  .stack-track,
+  .banner-track,
+  .orb,
+  .cursor-glow,
+  .section-rule .diamond,
+  .accent.sheen,
+  .hero::before,
+  .hero-note,
+  .scroll-hint .mouse::after,
+  .dot.pulse {
+    animation: none !important;
+  }
+  .cursor-glow {
+    display: none;
+  }
+}
