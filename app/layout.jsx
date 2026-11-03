@@ -4,6 +4,7 @@ import RevealProvider from '@/components/RevealProvider';
 import ProgressBar from '@/components/ProgressBar';
 import BackToTop from '@/components/BackToTop';
 import Protect from '@/components/Protect';
+import CursorGlow from '@/components/CursorGlow';
 
 const FAVICON =
   'data:image/svg+xml,' +
@@ -34,6 +35,7 @@ export default function RootLayout({ children }) {
         <div className="orb orb-1" aria-hidden="true" />
         <div className="orb orb-2" aria-hidden="true" />
         <div className="grain" aria-hidden="true" />
+        <CursorGlow />
         <Protect />
         <ProgressBar />
         <script

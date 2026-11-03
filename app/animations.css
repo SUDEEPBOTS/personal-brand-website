@@ -511,3 +511,17 @@ footer::before {
   0%,100% { opacity: 0.5; }
   50% { opacity: 1; }
 }
+
+/* ---------- Cursor glow ---------- */
+.cursor-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(31,63,99,0.10), transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+  will-change: transform;
+}
