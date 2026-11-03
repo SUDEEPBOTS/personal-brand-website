@@ -1142,3 +1142,34 @@ footer p {
   background: #2f8f5b;
   display: inline-block;
 }
+
+/* ---------- CTA banner ---------- */
+.cta-banner {
+  background: linear-gradient(135deg, #16283f 0%, #1f3f63 60%, #2a4f7e 100%);
+  color: #fff;
+  padding: 88px 0;
+  overflow: hidden;
+}
+.cta-inner {
+  text-align: center;
+  max-width: 560px;
+  margin: 0 auto;
+}
+.cta-inner h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  color: #fff;
+  margin-bottom: 12px;
+}
+.cta-inner p {
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 30px;
+  font-size: 1.02rem;
+}
+.btn-cta {
+  background: #fff;
+  color: var(--accent);
+  border: 1px solid #fff;
+}
+.btn-cta:hover {
+  background: rgba(255,255,255,0.9);
+}

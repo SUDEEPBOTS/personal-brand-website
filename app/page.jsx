@@ -8,6 +8,7 @@ import Process from '@/components/Process';
 import Faq from '@/components/Faq';
 import Metrics from '@/components/Metrics';
 import Testimonials from '@/components/Testimonials';
+import CtaBanner from '@/components/CtaBanner';
 import Work from '@/components/Work';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
@@ -28,6 +29,7 @@ export default function Home() {
         <Testimonials />
         <Work />
         <Contact />
+        <CtaBanner />
       </main>
       <Footer />
     </>
