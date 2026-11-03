@@ -464,3 +464,50 @@
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
+
+/* ---------- Section divider ornament ---------- */
+.section-rule {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  max-width: 640px;
+  margin: 0 auto 56px;
+}
+.section-rule::before,
+.section-rule::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+.section-rule .diamond {
+  width: 9px;
+  height: 9px;
+  transform: rotate(45deg);
+  background: var(--accent);
+  animation: diamondPulse 3.5s ease-in-out infinite;
+}
+@keyframes diamondPulse {
+  0%,100% { opacity: 0.4; transform: rotate(45deg) scale(0.8); }
+  50% { opacity: 1; transform: rotate(45deg) scale(1.15); }
+}
+
+/* ---------- Footer top accent line ---------- */
+footer {
+  position: relative;
+}
+footer::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  animation: lineGlow 8s ease-in-out infinite;
+}
+@keyframes lineGlow {
+  0%,100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
