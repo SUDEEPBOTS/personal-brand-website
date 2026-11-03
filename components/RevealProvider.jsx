@@ -2,9 +2,11 @@
 
 import { useEffect } from 'react';
 
+const SELECTOR = '.reveal, .reveal-left, .reveal-right';
+
 export default function RevealProvider({ children }) {
   useEffect(() => {
-    const els = document.querySelectorAll('.reveal');
+    const els = document.querySelectorAll(SELECTOR);
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {

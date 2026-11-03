@@ -28,7 +28,7 @@ export default function Experience() {
 
         <div className="timeline">
           {TIMELINE.map((item, i) => (
-            <div className="timeline-item reveal" key={i}>
+            <div className={`timeline-item ${i % 2 ? 'reveal-right' : 'reveal-left'}`} key={i}>
               <div className="timeline-dot" />
               <div className="timeline-period">{item.period}</div>
               <div className="timeline-body">

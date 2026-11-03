@@ -32,8 +32,8 @@ export default function Services() {
         </div>
 
         <div className="services-list">
-          {SERVICES.map((s) => (
-            <Spotlight key={s.num}><div className="service-row reveal">
+          {SERVICES.map((s, idx) => (
+            <Spotlight key={s.num}><div className={`service-row reveal ${idx === 1 ? 'd2' : ''}`}>
               <div className="service-num">{s.num}</div>
               <div>
                 <h3>{s.title}</h3>
