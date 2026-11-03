@@ -1372,3 +1372,22 @@ footer p {
   border-radius: 100px;
   transition: width 1.2s cubic-bezier(0.22,1,0.36,1);
 }
+
+/* Skeleton shimmer for OSS loading */
+.oss-skeleton {
+  pointer-events: none;
+}
+.sk {
+  background: linear-gradient(90deg, var(--surface-alt) 25%, #e9e7e0 37%, var(--surface-alt) 63%);
+  background-size: 400% 100%;
+  animation: shimmer 1.4s ease infinite;
+  border-radius: 4px;
+}
+.sk-name { height: 18px; width: 55%; margin-bottom: 12px; }
+.sk-line { height: 12px; width: 100%; margin-bottom: 8px; }
+.sk-line.short { width: 70%; }
+.sk-meta { height: 12px; width: 40%; margin-top: 12px; }
+@keyframes shimmer {
+  0% { background-position: 100% 0; }
+  100% { background-position: 0 0; }
+}

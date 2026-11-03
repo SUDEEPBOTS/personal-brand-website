@@ -40,7 +40,16 @@ export default function GithubRepos() {
         {error ? (
           <p className="oss-error reveal">{error}</p>
         ) : repos.length === 0 ? (
-          <p className="oss-error reveal">Loading repositories…</p>
+          <div className="oss-grid">
+            {[0, 1, 2, 3, 4, 5].map((k) => (
+              <div className="oss-card oss-skeleton" key={k}>
+                <div className="sk sk-name" />
+                <div className="sk sk-line" />
+                <div className="sk sk-line short" />
+                <div className="sk sk-meta" />
+              </div>
+            ))}
+          </div>
         ) : (
           <div className="oss-grid">
             {repos.map((r) => (
