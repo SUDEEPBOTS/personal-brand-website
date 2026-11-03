@@ -7,6 +7,7 @@ const PROJECTS = [
     type: 'Cloud platform',
     title: 'Yukisbox',
     desc: 'High-speed cloud file hosting — chunked uploads and instant byte-range video streaming.',
+    url: 'https://yukisbox.com',
   },
   {
     index: '02',
@@ -16,6 +17,7 @@ const PROJECTS = [
     type: 'Streaming engine',
     title: 'YukiAPI',
     desc: '4-tier high-throughput media streaming engine, built in Go with multi-client MTProto pools.',
+    url: 'https://yukiapi.site',
   },
   {
     index: '03',
@@ -25,6 +27,7 @@ const PROJECTS = [
     type: 'Telegram bot',
     title: 'YUKIMUSIC',
     desc: 'Group voice/video chat streaming engine powered by Python, Pyrogram, and FFmpeg.',
+    url: 'https://github.com/SUDEEPBOTS',
   },
 ];
 
@@ -37,7 +40,10 @@ export default function Work() {
         <div className="section-head reveal">
           <span className="eyebrow">Selected work</span>
           <h2>Projects built to <span className="accent sheen">hold up</span></h2>
-          <p>Live systems carrying real traffic every day.</p>
+          <p>
+            Live systems carrying real traffic every day.&nbsp;
+            <span className="live-badge"><span className="dot pulse" /> Live now</span>
+          </p>
         </div>
 
         <div className="work-grid">
@@ -52,7 +58,7 @@ export default function Work() {
                 <h3>{p.title}</h3>
                 <p>{p.desc}</p>
                 <div className="work-meta">
-                  <a href="#" className="work-link">View project</a>
+                  <a href={p.url} target="_blank" rel="noopener noreferrer" className="work-link">View project</a>
                   <span className="work-year">{p.year}</span>
                 </div>
               </div>
