@@ -12,6 +12,7 @@ import CtaBanner from '@/components/CtaBanner';
 import Clients from '@/components/Clients';
 import GithubRepos from '@/components/GithubRepos';
 import Terminal from '@/components/Terminal';
+import Skills from '@/components/Skills';
 import Work from '@/components/Work';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
@@ -26,6 +27,7 @@ export default function Home() {
         <Banner />
         <Services />
         <Terminal />
+        <Skills />
         <Metrics />
         <Clients />
         <Process />

@@ -1335,3 +1335,40 @@ footer p {
   vertical-align: -2px;
   animation: caretBlink 0.9s step-end infinite;
 }
+
+/* ---------- Skills bars ---------- */
+.skills-grid {
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.skill-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 8px;
+}
+.skill-name {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+.skill-value {
+  font-family: var(--serif);
+  font-size: 0.95rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+.skill-track {
+  height: 8px;
+  background: var(--surface-alt);
+  border-radius: 100px;
+  overflow: hidden;
+}
+.skill-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), #3c6aa8);
+  border-radius: 100px;
+  transition: width 1.2s cubic-bezier(0.22,1,0.36,1);
+}
