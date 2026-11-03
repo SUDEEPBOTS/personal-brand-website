@@ -1,3 +1,5 @@
+import Spotlight from './Spotlight';
+
 const SERVICES = [
   {
     num: '01',
@@ -31,7 +33,7 @@ export default function Services() {
 
         <div className="services-list">
           {SERVICES.map((s) => (
-            <div className="service-row reveal" key={s.num}>
+            <Spotlight key={s.num}><div className="service-row reveal">
               <div className="service-num">{s.num}</div>
               <div>
                 <h3>{s.title}</h3>
@@ -42,7 +44,7 @@ export default function Services() {
                   <span className="tag" key={t}>{t}</span>
                 ))}
               </div>
-            </div>
+            </div></Spotlight>
           ))}
         </div>
       </div>

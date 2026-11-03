@@ -26,6 +26,11 @@ export default function Hero() {
           </p>
         </div>
 
+        <div className="scroll-hint" aria-hidden="true">
+          <div className="mouse" />
+          scroll
+        </div>
+
         <Parallax speed={0.08}><aside className="hero-note reveal d3">
           <div className="quote">
             &ldquo;Sudeep built our media streaming pipeline and API layer — hundreds of thousands of
