@@ -1,6 +1,7 @@
 import HeroStats from './HeroStats';
 import Magnetic from './Magnetic';
 import Parallax from './Parallax';
+import RotatingWord from './RotatingWord';
 
 export default function Hero() {
   return (
@@ -9,7 +10,7 @@ export default function Hero() {
         <div>
           <span className="eyebrow reveal d1">Backend &amp; Distributed Systems Engineer · Delhi</span>
           <h1 className="reveal d2">
-            I build <span className="accent sheen">high-concurrency</span> Telegram bots &amp; APIs that actually work.
+            I build <span className="accent sheen">high-concurrency</span> <RotatingWord /> that actually work.
           </h1>
           <p className="reveal d3">
             I&apos;m Sudeep Mandal — building scalable backend systems, streaming engines, and bot
