@@ -1277,3 +1277,61 @@ footer p {
     max-width: 460px;
   }
 }
+
+/* ---------- Terminal showcase ---------- */
+.terminal {
+  max-width: 640px;
+  margin: 0 auto;
+  background: #101a24;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.terminal-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: #1a2836;
+}
+.terminal-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+}
+.terminal-dot.red { background: #ff5f57; }
+.terminal-dot.yellow { background: #febc2e; }
+.terminal-dot.green { background: #28c840; }
+.terminal-title {
+  margin-left: 8px;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.55);
+}
+.terminal-body {
+  padding: 22px 20px;
+  font-family: 'SF Mono', 'Fira Code', Menlo, Consolas, monospace;
+  font-size: 0.88rem;
+  line-height: 1.9;
+  min-height: 140px;
+}
+.terminal-line {
+  display: flex;
+  gap: 10px;
+}
+.terminal-prompt {
+  color: #3ad6ff;
+  font-weight: 600;
+}
+.terminal-text {
+  color: #d7e0e8;
+}
+.terminal-caret {
+  display: inline-block;
+  width: 8px;
+  height: 15px;
+  margin-left: 4px;
+  background: #3ad6ff;
+  vertical-align: -2px;
+  animation: caretBlink 0.9s step-end infinite;
+}

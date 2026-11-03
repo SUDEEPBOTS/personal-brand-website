@@ -11,6 +11,7 @@ import Testimonials from '@/components/Testimonials';
 import CtaBanner from '@/components/CtaBanner';
 import Clients from '@/components/Clients';
 import GithubRepos from '@/components/GithubRepos';
+import Terminal from '@/components/Terminal';
 import Work from '@/components/Work';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
@@ -24,6 +25,7 @@ export default function Home() {
         <Stack />
         <Banner />
         <Services />
+        <Terminal />
         <Metrics />
         <Clients />
         <Process />
